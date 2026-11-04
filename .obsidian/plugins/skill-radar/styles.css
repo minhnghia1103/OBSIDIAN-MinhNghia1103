@@ -1,0 +1,280 @@
+.skill-radar-view {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ── Empty state ─────────────────────────────────────────────────────────── */
+
+.skill-radar-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 2rem;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.skill-radar-empty-icon {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+.skill-radar-empty-state h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.skill-radar-empty-subtitle {
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+}
+
+.skill-radar-steps {
+  width: 100%;
+  text-align: left;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-radar-steps h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.skill-radar-steps ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.skill-radar-steps li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  color: var(--text-normal);
+}
+
+.skill-radar-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.skill-radar-steps code {
+  background: var(--background-primary-alt);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+
+.skill-radar-empty-note {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Chart view ──────────────────────────────────────────────────────────── */
+
+.skill-radar-chart-view {
+  padding: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.skill-radar-header {
+  margin-bottom: 0.5rem;
+}
+
+.skill-radar-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.skill-radar-title-row h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.skill-radar-mode-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.15em 0.55em;
+  border-radius: 4px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.skill-radar-mode-badge--auto {
+  background: rgba(99, 179, 237, 0.15);
+  color: rgba(99, 179, 237, 0.9);
+  border: 1px solid rgba(99, 179, 237, 0.35);
+}
+
+.skill-radar-mode-badge--locked {
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.skill-radar-lock-btn {
+  font-size: 0.78rem;
+  padding: 0.2em 0.65em;
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.skill-radar-lock-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.skill-radar-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.skill-radar-summary {
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0 0 1.5rem;
+}
+
+.skill-radar-canvas-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.skill-radar-canvas {
+  width: 100% !important;
+}
+
+/* ── Dimension list ──────────────────────────────────────────────────────── */
+
+.skill-radar-dimension-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-radar-dimension-row {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.skill-radar-dimension-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.skill-radar-dimension-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.35rem;
+}
+
+.skill-radar-dimension-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.skill-radar-dimension-score {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.skill-radar-skill-bar {
+  height: 4px;
+  background: var(--background-modifier-border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+.skill-radar-skill-bar-fill {
+  height: 100%;
+  background: rgba(99, 179, 237, 0.85);
+  border-radius: 2px;
+}
+
+.skill-radar-evidence {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.skill-radar-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.skill-radar-skill-tag {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  padding: 0.1em 0.5em;
+}
+
+/* ── Error banner ────────────────────────────────────────────────────────── */
+
+.skill-radar-error-banner {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--background-modifier-error);
+  color: var(--text-error);
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--background-modifier-error-hover);
+}
+
+.skill-radar-error-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-error);
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Settings ────────────────────────────────────────────────────────────── */
+
+.skill-radar-settings-desc {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.skill-radar-settings-list {
+  margin-bottom: 0.5rem;
+}
+
+.skill-radar-dimension-setting .setting-item-control {
+  gap: 0.5rem;
+}

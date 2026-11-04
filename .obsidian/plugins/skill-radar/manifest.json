@@ -1,0 +1,10 @@
+{
+  "id": "skill-radar",
+  "name": "Skill Radar",
+  "description": "Visualize your skills as a radar chart, auto-populated from your vault by your AI tool.",
+  "author": "giangdvdotdev",
+  "authorUrl": "https://giangdv.dev",
+  "minAppVersion": "0.15.0",
+  "version": "0.1.0",
+  "isDesktopOnly": false
+}
